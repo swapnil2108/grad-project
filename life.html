@@ -1,0 +1,133 @@
+<html ng-app='lifehome'>
+
+<head>
+    <title>Ace Isurance</title>
+    <!-- Compiled and minified CSS -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+    <script src="index.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <script src="index.html"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-wrapper indigo darken-1">
+                <img src="image/runkeeper-icon-2001.png">
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="agents.html">Find an agent</a></li>
+                    <li><a href="collapsible.html">Contact Us</a></li>
+
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Modal signup Structure -->
+    </header>
+    <main ng-controller="auto" ng-init="do()">
+        <div class="slider">
+            <ul class="slides">
+                <li>
+                    <img src="image/life/life1.png">
+                    <!-- random image -->
+                    <div class="caption left-align">
+                        <h3>Get your life insured!</h3>
+                        <h5 class="light grey-text text-lighten-3">With Swap Insurance</h5>
+                    </div>
+                </li>
+                <li>
+                    <img src="image/life/life2.png">
+                    <!-- random image -->
+                </li>
+                <li>
+                    <img src="image/life/life3.png">
+                    <!-- random image -->
+                </li>
+                <li>
+                    <img src="image/life/life4.png">
+                    <!-- random image -->
+                    <div class="caption right-align">
+                        <h3>Stay Insured </h3>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="border">
+            <h5>Please Enter the details:</h5><br>
+            <div class="input-field col s7 m6">
+                <select id="age" class="icons">
+      <option value="" disabled selected>Select your age</option>
+      <option value="1">5-20</option>
+      <option value="2">20-40</option>
+      <option value="3">40-60</option>
+     <option value="4">60+</option>
+    </select>
+            </div>
+            <div class="input-field col s7">
+                <select id='state'>
+      <option value="" disabled selected>Select State</option>
+      <option value="CA">california</option>
+      <option value="NY">New York</option>
+      <option value="AR">Arizona</option>
+        <option value="NE">Nevada</option>
+    </select>
+            </div>
+        </div>
+        <div class="radio1">
+            <form action="#">
+                <p>Please Select type</p>
+                <p>
+                    <input name="group1" value="monthly" type="radio" id="test1" />
+                    <label for="test1">Monthly</label>
+                </p>
+                <p>
+                    <input name="group1" value="6monthly" type="radio" id="test2" />
+                    <label for="test2">6 monthly</label>
+                </p>
+                <p>
+                    <input name="group1" value="yearly" type="radio" id="test3" />
+                    <label for="test3">Yearly</label>
+                </p>
+            </form>
+            <a class="waves-effect waves-light btn" ng-click="check()">Check</a>
+        </div>
+        <div class="vertical">
+        </div>
+        <div class="rate">
+            <p ng-model='rate' ng-init="rate='0$'" class="rate1">{{rate}}</p>
+            <a class="waves-effect waves-light btn" ng-click='purchase()' ng-model='purchase' ng-init="took='purchase'">{{took}}</a>
+
+        </div>
+    </main>
+    <footer>
+        <footer class="page-footer indigo darken-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Footer Content</h5>
+                        <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Links</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    © 2014 Copyright Text
+                    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                </div>
+            </div>
+        </footer>
+    </footer>
+</body>
+
+</html>

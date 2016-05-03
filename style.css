@@ -1,0 +1,88 @@
+main{
+    height: 47.05em;
+}
+.reg{
+    position: relative;
+    float: left;
+}
+container{
+    float: left;
+    resize: both;
+}
+.bg{
+    opacity: 0.7;
+    width:100%;
+    height: 48.5em;
+    position: absolute;
+    z-index: -1;
+}
+.tab{
+    z-index: 0;
+    height: 70%;
+    width: 50%;
+    position: absolute;
+    margin: 20% 70% 80% 30%;
+}
+.vertical-divider{
+     border-left:1px solid #38546d; 
+     border-right:1px solid #16222c; 
+     height:50%;
+     position:absolute;
+     right:45%;
+     top:30%;
+}
+.vertical{
+        border-left:1px solid #38546d; 
+     border-right:1px solid #16222c; 
+     height:20%;
+     position:absolute;
+     right:50%;
+     top:55%;
+}
+.retrive{
+    height: 50%;
+    position: absolute;
+    right: 20%;
+    top: 50%;
+}
+.insured{
+    z-index: 0;
+    position: absolute;
+    top: 35em;
+    right: 60em;
+}
+#map {
+    height:420px;
+    width:600px;
+    z-index: 0;
+}
+.infoWindowContent {
+    font-size:  14px !important;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+h2 {
+    margin-bottom:0;
+    margin-top: 0;
+}
+.border{ 
+    border: 1px solid black;
+    margin: 2px;
+    width: 30%;
+    margin-left: 2%
+}
+.rate{
+        margin-left: 64%;
+    margin-top: -15%;
+}
+.rate1{
+        margin-right: 85%;
+    font-family: fantasy;
+    font-size: 5em;
+    color: teal;
+}
+.radio1{
+        margin-left: 36%;
+    margin-top: -13%;
+    width: 10%;
+}

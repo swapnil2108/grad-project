@@ -1,0 +1,158 @@
+<html ng-app='insurance'>
+
+<head>
+    <title>Ace Isurance</title>
+    <!-- Compiled and minified CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="index.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-wrapper indigo darken-1" ng-controller="login">
+                <a href="index.html"><img src="image/runkeeper-icon-2001.png"></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="agents.html">Find an agent</a></li>
+                    <li><a href="collapsible.html">Contact Us</a></li>
+                    <li><a class="modal-trigger" ng-click="modal()" id="login">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!--Modal login Structure-->
+        <div id="modal1" class="modal" ng-controller="login">
+            <div class="modal-content">
+                <div class="row">
+                    <h4>Login</h4>
+                    <form class="col s10">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="email" ng-model='user.email' type="email" class="validate">
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="password" ng-model='user.password' type="password" class="validate">
+                                <label for="password">Password</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <a id="modallogin" ng-click="login(user)" class="waves-effect waves-light btn">Login</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="reg">
+                    <h6>Don't have an Accout?, click to  <a class="modal-trigger waves-effect waves-light" ng-click="reg()">Register</a></h6>
+                </div>
+            </div>
+        </div>
+        <!-- Modal signup Structure -->
+        <div id="signup" class="modal modal-fixed-footer" ng-controller="login">
+            <div class="modal-content">
+                <div class="row">
+                    <form class="col s10">
+                        <h4>Register</h4>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="email" ng-model="user.regemail" type="email" class="validate">
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="password" ng-model="user.regpass" type="password" class="validate">
+                                <label for="password">Password</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="confirmpassword" ng-model="user.regconfirmpass" type="password" class="validate">
+                                <label for="confirmpassword">Confirm Password</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a ng-click="register(user)" class="modal-action modal-close waves-effect waves-green btn-flat ">Register</a>
+            </div>
+        </div>
+
+    </header>
+
+    <main ng-controller="login">
+        <img class="bg" src="image/161672504.jpg">
+        <div class="slider">
+            <ul class="slides">
+                <li>
+                    <img src="image/life/life3.png">
+                    <!-- random image -->
+                </li>
+                <li>
+                    <img src="image/auto/BMW.png">
+                    <!-- random image -->
+                </li>
+                <li>
+                    <img src="image/bike/bike1.png">
+                    <!-- random image -->
+                </li>
+                <li>
+                    <img src="image/life/life1.png">
+                    <!-- random image -->
+                </li>
+            </ul>
+        </div>
+        <div class="insured">
+            <button id="insurance" ng-click="insured()" class="btn modal-trigger">Get Insured</button>
+        </div>
+        <!--get insurance quote modal-->
+        <div id="insurance_modal" class="modal bottom-sheet" ng-controller="login">
+            <div class="modal-content">
+
+                <a href="auto.html"><img src="image/edit/GenericTreeNew.png"></a>
+                <a href="bike.html"><img src="image/edit/bike.png" ng-click="bike()"></a>
+                <a href="life.html"><img src="image/edit/life.png" ng-click="life()"></a>
+                <a href="house.html"><img src="image/edit/house.png" ng-click="house()"></a>
+                <div class="vertical-divider"></div>
+                <div class="retrive">
+                    <h4>Retrive a saved quote</h4></div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <footer class="page-footer indigo darken-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Footer Content</h5>
+                        <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Links</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    © 2014 Copyright Text
+                    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                </div>
+            </div>
+        </footer>
+    </footer>
+</body>
+
+</html>

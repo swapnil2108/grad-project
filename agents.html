@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <title>Swap Isurance</title>
+    <!-- Compiled and minified CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <script src="index.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-wrapper indigo darken-1">
+                <a href="index.html"> <img src="image/runkeeper-icon-2001.png"></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="badges.html">Find an agent</a></li>
+                    <li><a href="collapsible.html">Contact Us</a></li>
+                    <li><a class="modal-trigger" id="login">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!--Modal login Structure-->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <div class="row">
+                    <h4>Login</h4>
+                    <form class="col s10">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="email" type="email" class="validate">
+                                <label for="last_name">Email address</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="password" type="password" class="validate">
+                                <label for="password">Password</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <a class="waves-effect waves-light btn">Login</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="reg">
+                    <h6>Don't have an Accout?, click to Register</h6>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <img class="bg" src="image/161672504.jpg">
+        <div ng-app="mapsApp" ng-controller="MapCtrl">
+            <div id="map"></div>
+            <div id="class" ng-repeat="marker in markers | orderBy : 'title'">
+                <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
+            </div>
+        </div>
+    </main>
+    <footer class="page-footer indigo darken-1">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Footer Content</h5>
+                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2014 Copyright Text
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
